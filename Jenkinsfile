@@ -7,7 +7,7 @@
 //     }
 // }
 pipeline {
-  agent { Dockerfile true }
+  agent { dockerfile true }
   stages {
     stage('Do job stage') {
       steps {
