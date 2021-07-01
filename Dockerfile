@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:latest
 COPY .  /app
 WORKDIR /app
 RUN pip3 install flask
