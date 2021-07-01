@@ -8,6 +8,10 @@
 // }
 pipeline {
   agent { dockerfile true }
+  stage('Hello') {
+      steps {
+        sh "echo 'HELLO'"
+      }
   stages {
     stage('Do job stage') {
       steps {
