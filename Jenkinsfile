@@ -12,10 +12,12 @@ pipeline {
           image 'python:3.9.7' 
         }
     }
+    stages {
     stage('Do job stage') {
       steps {
         sh "python --version"
       }
     }
   }
+}
 
