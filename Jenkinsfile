@@ -8,11 +8,11 @@
 // }
 pipeline {
   agent { dockerfile true }
-  stage('Hello') {
+  stages {
+    stage('Hello') {
       steps {
         sh "echo 'HELLO'"
       }
-  stages {
     stage('Do job stage') {
       steps {
         sh "python --version"
