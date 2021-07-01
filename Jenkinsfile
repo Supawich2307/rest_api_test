@@ -1,6 +1,6 @@
 node {
     stage("Hello") {
-        sh "Hello"   
+        sh "echo 'Hello'"   
         sh "docker --version"    
     }
 }
