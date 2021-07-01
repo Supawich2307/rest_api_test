@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh "echo 'HELLO'"
       }
+    }
     stage('Do job stage') {
       steps {
         sh "python --version"
