@@ -8,13 +8,9 @@
 // }
 pipeline {
   agent {
-        docker { image 'python:3.9.7' }
-    }
-  stages {
-    stage('Hello') {
-      steps {
-        sh "echo 'HELLO'"
-      }
+        docker { 
+          image 'python:3.9.7' 
+        }
     }
     stage('Do job stage') {
       steps {
