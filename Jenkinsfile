@@ -1,23 +1,20 @@
-// node {
-//     stage("Hello") {
-//         sh "echo 'Hello'"   
-//     }
-//     stage("docker") {
-//         sh "docker --version"    
-//     }
-// }
-pipeline {
-  agent {
-        docker { 
-          image 'python:3.7.6' 
-        }
+node{
+   //  stage("SCM") {
+   //      git branch: "master", url: "https://github.com/codebangkok/jenkins"
+   //  }
+    stage('Initialize'){
+        def dockerHome = tool 'docker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+        sh "echo ${env.PATH}"
     }
-    stages {
-    stage('Do job stage') {
-      steps {
-        sh "python --version"
-      }
+    stage("Build") {
+      sh "pwd"
+      sh "docker build ."
     }
-  }
+   //  stage("Push") {
+   //      sh """
+   //      docker login -u "supakew" -p "Su11pa11kew11"
+   //      docker image push suapkew/test_rest
+   //      """
+   //  }
 }
-
