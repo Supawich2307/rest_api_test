@@ -3,7 +3,7 @@ node{
    //      git branch: "master", url: "https://github.com/codebangkok/jenkins"
    //  }
     stage('Initialize'){
-        def dockerHome = tool 'mydocker'
+        def dockerHome = tool 'myDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
         sh "echo ${env.PATH}"
     }
