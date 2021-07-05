@@ -9,7 +9,7 @@ node{
     }
     stage("Build") {
       sh "pwd"
-      sh "docker image build -t test_1 ."
+      sh "docker image build -t test_1 https://github.com/Supawich2307/rest_api_test/blob/main/Dockerfile"
     }
    //  stage("Push") {
    //      sh """
