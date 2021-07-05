@@ -1,15 +1,15 @@
 node{
-   //  stage("SCM") {
-   //      git branch: "master", url: "https://github.com/codebangkok/jenkins"
-   //  }
-    stage('Initialize'){
+   stage('Initialize'){
         def dockerHome = tool 'myDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
         sh "echo ${env.PATH}"
     }
+    stage("SCM") {
+        git branch: "main", url: "https://github.com/Supawich2307/rest_api_test.git"
+    }
     stage("Build") {
       sh "pwd"
-      sh "docker build -t test_1 main/"
+      sh "docker image build -t test_1 ."
     }
    //  stage("Push") {
    //      sh """
