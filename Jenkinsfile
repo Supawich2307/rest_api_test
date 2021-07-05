@@ -9,7 +9,7 @@ node{
     }
     stage("Build") {
       sh "pwd"
-      sh "docker build -t supakew_test_rest_1 ."
+      sh "docker --version"
     }
    //  stage("Push") {
    //      sh """
