@@ -1,6 +1,7 @@
 node{
    stage('Initialize'){
         def dockerHome = tool 'myDocker'
+        sh "export DOCKER_HOST=tcp://localhost:2735"
         env.PATH = "${dockerHome}/bin:${env.PATH}"
         sh "echo ${env.PATH}"
     }
