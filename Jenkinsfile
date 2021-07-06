@@ -7,11 +7,11 @@ node{
         env.PATH = "${dockerHome}/bin:${env.PATH}"
         sh "echo ${env.PATH}"
     }
-    stage("Kill Docker") {
-      def older_num = "${env.BUILD_NUMBER-1}"
-      sh "echo 'older_num'"
-      sh "docker kill supakew/test_api:${older_num}"
-    }
+//     stage("Kill Docker") {
+//       def older_num = "${env.BUILD_NUMBER-1}"
+//       sh "echo 'older_num'"
+//       sh "docker kill supakew/test_api:${older_num}"
+//     }
     stage("Build") {
       sh "docker build -t supakew/test_api:${env.BUILD_NUMBER} ."
     }
