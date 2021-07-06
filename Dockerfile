@@ -5,4 +5,4 @@ RUN pip3 install flask
 RUN pip3 install waitress
 RUN pip3 install requests
 EXPOSE  5200
-CMD ["python3", "src/server.py"]
+CMD ["python3", "./src/server.py"]
